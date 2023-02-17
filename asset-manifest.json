@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/proyecto-react/static/css/main.502fe14f.css",
+    "main.js": "/proyecto-react/static/js/main.d8287888.js",
+    "static/js/787.d920d4ed.chunk.js": "/proyecto-react/static/js/787.d920d4ed.chunk.js",
+    "static/media/dolly-logo.jpg": "/proyecto-react/static/media/dolly-logo.3b7bed3c0b1213ffebbe.jpg",
+    "index.html": "/proyecto-react/index.html",
+    "main.502fe14f.css.map": "/proyecto-react/static/css/main.502fe14f.css.map",
+    "main.d8287888.js.map": "/proyecto-react/static/js/main.d8287888.js.map",
+    "787.d920d4ed.chunk.js.map": "/proyecto-react/static/js/787.d920d4ed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.502fe14f.css",
+    "static/js/main.d8287888.js"
+  ]
+}
