@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/proyecto-react/static/css/main.502fe14f.css",
-    "main.js": "/proyecto-react/static/js/main.d8287888.js",
+    "main.css": "/proyecto-react/static/css/main.e02814bc.css",
+    "main.js": "/proyecto-react/static/js/main.7bad70cc.js",
     "static/js/787.d920d4ed.chunk.js": "/proyecto-react/static/js/787.d920d4ed.chunk.js",
+    "static/media/bufanda.jpg": "/proyecto-react/static/media/bufanda.588c3f8147d56227a787.jpg",
     "static/media/dolly-logo.jpg": "/proyecto-react/static/media/dolly-logo.3b7bed3c0b1213ffebbe.jpg",
     "index.html": "/proyecto-react/index.html",
-    "main.502fe14f.css.map": "/proyecto-react/static/css/main.502fe14f.css.map",
-    "main.d8287888.js.map": "/proyecto-react/static/js/main.d8287888.js.map",
+    "main.e02814bc.css.map": "/proyecto-react/static/css/main.e02814bc.css.map",
+    "main.7bad70cc.js.map": "/proyecto-react/static/js/main.7bad70cc.js.map",
     "787.d920d4ed.chunk.js.map": "/proyecto-react/static/js/787.d920d4ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.502fe14f.css",
-    "static/js/main.d8287888.js"
+    "static/css/main.e02814bc.css",
+    "static/js/main.7bad70cc.js"
   ]
 }
