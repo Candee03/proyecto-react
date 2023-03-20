@@ -2,16 +2,22 @@
     height: 15rem;
     width: 10rem;
     background-color: rgb(156, 231, 248);
+    border: 1px black dashed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin: 1rem 1.5rem;
+    margin: 1rem 1rem;
+    padding: 0.5rem;
     .img-producto {
         width: 8rem;
     }
     .cont-descripcion {
         margin: 1rem;
+        .p-description-card {
+            font-size: 14px;
+            font-weight:200;
+        }
     }
     .btn-detail {
         background-color: #F8FCFF;

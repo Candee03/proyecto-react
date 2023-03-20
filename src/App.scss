@@ -14,6 +14,17 @@ $color-bLanco :#F8FCFF;
     margin: 0 9rem;
   }
 }
+.btn-volver {
+  background-color: $color-bLanco;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px black dashed;
+  margin: 3rem 0 0 3rem;
+  position: absolute;
+  .link-volver {
+    color: black;
+  }
+}
 main {
   margin: 3rem 9rem;
   background-color: $color-bLanco;

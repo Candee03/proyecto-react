@@ -1,28 +1,42 @@
 .cont-detail {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     .li-cont-detail {
         display: flex;
         .img-producto {
-            width: 18rem;
+            width: 20rem;
         }
         .cont-descripcion {
             margin: 0 1rem;
-            .p-nombre {
+            .p-nombre, .p-precio {
                 font-size: 18px;
+                text-transform: uppercase;
             }
             .p-descripcion {
+                font-size: 16px;
                 margin: 1rem 0;
             }
         }
     }
-    .agreg-carr {
-        background-color: rgb(156, 231, 248);
-        padding: 1rem;
-        margin: 1.5rem;
-        width: 10rem;
+    .div-cont-agregar {
+        display: flex;
+        justify-content: end;
+        width: 80%;
+        .cont-agregar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .agreg-carr {
+                background-color: rgb(156, 231, 248);
+                border-radius: 10px;
+                margin: 1.5rem 0 0 0;
+                border: 1px black dashed;
+                padding: 1rem;
+                width: 15rem;
+            }
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import './Logo.scss';
 import React from "react";
-import dollyLogo from '../../img/dolly-logo.jpg'
+import dollyLogo from '../../img/dolly-logo.png'
 
 
 const Logo = () => {
