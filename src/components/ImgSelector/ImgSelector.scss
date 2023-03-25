@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    .container-img {
+        .main-img {
+            width: 24rem;
+        }
+    }
+    .selector-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        button {
+            background: none;
+            .active {
+                width: 6rem;
+                margin-right: 0.5rem;
+                opacity: 1;
+                box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.642);
+                transition: 0.2s;
+            }
+            .inactive {
+                width: 6rem;
+                margin-right: 0.5rem;
+                opacity: .6;
+            }
+        }
+    }
+}
+

@@ -37,7 +37,15 @@ const CartContextProvider= (props) => {
         return productoRepetido
     }
     return(
-        <cartContext.Provider value={{ cart, addItem, countTotalItems, clear, removeItem, isInCart, countPrecioTotal }}>
+        <cartContext.Provider value={{ 
+            cart, 
+            addItem, 
+            countTotalItems, 
+            clear, 
+            removeItem, 
+            isInCart, 
+            countPrecioTotal
+        }}>
             {props.children}
         </cartContext.Provider>
     )

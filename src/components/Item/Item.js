@@ -1,18 +1,17 @@
 import React from "react";
 import './Item.scss';
-import { Link } from "react-router-dom";
+import { BtnLinkeadoBlanco } from "../../common/Buttons/BTN";
 
 const Item = ({producto}) =>{
     return( 
     <li className="li-cont">
-        <img className="img-producto" src={producto.img}/>
+        <img alt="" className="img-producto" src={producto.img[0]}/>
         <div className="cont-descripcion">
-            <p className="p-description-card">Nombre:{producto.nombre}</p>
-            <p className="p-description-card">Precio:${producto.precio}</p>
+            <p className="precio-description-card">${producto.precio}</p>
+            <p className="nombre-description-card">{producto.nombre}</p>
+            <p className="description-card">{producto.description}</p>
         </div>
-        <button className="btn-detail">
-            <Link className="link-detail" to={`/detail/${producto.id}`}>Ver Detalle</Link>
-        </button>
+        <BtnLinkeadoBlanco link={`/detail/${producto.id}`} children={'Ver Detalle'} margin={'0 0.5rem 0.5rem 0.5rem'}/>
     </li>
     )
 }

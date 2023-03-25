@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from '../ItemList/ItemList';
 import productos from '../../productos';
 import { useParams } from 'react-router-dom';
+import Loader from '../../common/Loader/Loader';
 
 
 const ItemListContainer = () => {
@@ -10,14 +11,17 @@ const ItemListContainer = () => {
     const {idCategory}  = useParams()
 
     useEffect (() => {
-        productos().then((data) => {
-            idCategory? setListProducts(data.filter((productos)=> productos.categoria === Number(idCategory))): setListProducts(data)
-        })
+        setListProducts([])
+        setTimeout (()=>{
+            productos().then((data) => {
+                idCategory? setListProducts(data.filter((productos)=> productos.categoria === Number(idCategory))): setListProducts(data)
+            })
+        },2000)
     },[idCategory])
 
     return (
         <div className='cont-items'>
-            <ItemList Items={listProducts}/>
+            {listProducts.length===0?<Loader/>:<ItemList Items={listProducts}/>}
         </div>
     );
 };

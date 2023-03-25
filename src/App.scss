@@ -25,6 +25,34 @@ $color-bLanco :#F8FCFF;
     color: black;
   }
 }
+.main-Cart {
+  .cont-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    .table {
+      width: 90%;
+      border-collapse: collapse;
+      text-align: center;
+      tbody {
+        tr {
+          display: table-row;
+          th {
+            background-color: #C5E6F9;
+          }
+          td, th {
+            padding: 0.5rem;
+            display: table-cell;
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
 main {
   margin: 3rem 9rem;
   background-color: $color-bLanco;

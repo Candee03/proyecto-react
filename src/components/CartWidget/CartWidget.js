@@ -7,10 +7,11 @@ import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
     const {cart} = useContext(cartContext)
+
     return (
         <Link to={'/cart'} className="cart-widget">
-            <img className='cart-img' src={ CartLogo }></img>
-            <span className="counter">{cart.length}</span>
+            <img alt='' className='cart-img' src={ CartLogo }></img>
+            {cart.length!==0 && <span className="counter">{cart.length}</span>}
         </Link>
     );
 };

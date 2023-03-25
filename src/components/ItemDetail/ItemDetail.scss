@@ -20,23 +20,5 @@
             }
         }
     }
-    .div-cont-agregar {
-        display: flex;
-        justify-content: end;
-        width: 80%;
-        .cont-agregar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .agreg-carr {
-                background-color: rgb(156, 231, 248);
-                border-radius: 10px;
-                margin: 1.5rem 0 0 0;
-                border: 1px black dashed;
-                padding: 1rem;
-                width: 15rem;
-            }
-        }
-    }
 }
 
