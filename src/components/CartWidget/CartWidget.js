@@ -1,7 +1,7 @@
-import './CartWidget.scss'
-import CartLogo from '../../img/cart.png'
 import React, { useContext } from "react";
 import cartContext from '../../context/cartContext'
+import './CartWidget.scss'
+import CartLogo from '../../img/cart.png'
 import { Link } from 'react-router-dom';
 
 

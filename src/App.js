@@ -1,13 +1,15 @@
 import './App.scss';
 import React from 'react';
-import NavBar from './common/NavBar/NavBar';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Details } from './pages/Details';
-import { Cart } from './pages/Cart';
 import {CartContextProvider} from './context/cartContext';
-import { Error } from './pages/Error';
+/*-------Componente NavBar---------- */
+import NavBar from './common/NavBar/NavBar';
+/*-------PAGES--------*/
+import Home from './pages/Home';
+import Details from './pages/Details';
+import Cart from './pages/Cart';
 import SobreNosotros from './pages/SobreNosotros';
+import Error from './pages/Error';
 
 
 

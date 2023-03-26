@@ -1,7 +1,7 @@
 import React from 'react'
 import { BtnLinkeadoAzul } from "../common/Buttons/BTN";
 
-export const Error = () => {
+const Error = () => {
     return (
     <main>
         <h1>ESTA RUTA NO EXISTE 😣🫤</h1>
@@ -9,3 +9,4 @@ export const Error = () => {
     </main>
     )
 }
+export default Error

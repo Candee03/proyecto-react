@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import cartContext from '../context/cartContext'
 import { BtnConFuncion, BtnLinkeadoAzul, BtnLinkeadoBlanco } from '../common/Buttons/BTN'
 
-export const Cart = () => {
+const Cart = () => {
     const { cart, countTotalItems, removeItem, clear, countPrecioTotal } = useContext(cartContext)
     if(cart.length === 0) {
         return (
@@ -17,6 +17,9 @@ export const Cart = () => {
         <>
             <BtnLinkeadoBlanco link={'/'} children={'Volver'} position={'absolute'}/>
             <main className='main-Cart'>
+                <div className='cont-title'>
+                    <h1 className='title'>Mi Carrito</h1>
+                </div>
                 <div className='cont-cart'>
                     <table className='table'>
                         <tbody>
@@ -43,13 +46,15 @@ export const Cart = () => {
                             )})}
                         </tbody>
                     </table>
-                    <div>
-                        <p>Cantidad Total: {countTotalItems()}</p>
-                        <p>Precio Total: ${countPrecioTotal()}</p>
-                        <BtnConFuncion funcion={clear} children={'Vaciar todo el carrito'} size={'16px'} padding={'0.2rem 0.5rem'} />
+                    <div className='cont-resumen'>
+                        <p className='p-resumen-carrito'>Cantidad Total: {countTotalItems()}</p>
+                        <p className='p-resumen-carrito'>Precio Total: ${countPrecioTotal()}</p>
+                        <BtnConFuncion funcion={clear} children={'Vaciar todo el carrito'} size={'16px'} padding={'0.2rem 0.5rem'} margin ={'1rem 0'}/>
                     </div>
                 </div>
             </main>
         </>
     )
 }
+
+export default Cart

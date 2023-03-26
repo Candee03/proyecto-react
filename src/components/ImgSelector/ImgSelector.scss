@@ -9,7 +9,7 @@
     .selector-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         button {
             background: none;
             .active {

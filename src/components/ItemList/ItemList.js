@@ -4,9 +4,9 @@ import './ItemList.scss';
 
 const ItemList = ({Items}) => {
     return (
-    <ul className='ul-productos'>
-    {Items.map(p => <Item key={p.id} producto={p}/>)}
-    </ul>
+        <ul className='ul-productos'>
+            {Items.map(p => <Item key={p.id} producto={p}/>)}
+        </ul>
     )
 }
 

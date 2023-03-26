@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+/*-------Components---------*/
 import Loader from "../../common/Loader/Loader";
-import productos from "../../productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
+/*--------PRODUCTOS----------*/
+import productos from "../../productos";
 
 
 const ItemDetailsContainer = () => {
     const {idProduct} = useParams()
     const [listProduct, setListProduct] = useState([])
     
+    /*-------------FIREBASE-------------*/
     useEffect (() => {
         setTimeout(() => {
             productos().then((data) => {

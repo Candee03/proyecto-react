@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
     .li-cont-detail {
         display: flex;
         .img-producto {
@@ -11,13 +12,24 @@
         .cont-descripcion {
             margin: 0 1rem;
             .p-nombre, .p-precio {
-                font-size: 18px;
-                text-transform: uppercase;
+                font-size: 22px;
+                text-transform: capitalize;
             }
             .p-descripcion {
                 font-size: 16px;
                 margin: 1rem 0;
             }
+        }
+    }
+    .div-cont-agregar {
+        margin-top: 2rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .p-ultimaUnidad {
+            color: rgb(0, 160, 0);
+            font-weight: bolder;
+            font-size: 18px;
         }
     }
 }

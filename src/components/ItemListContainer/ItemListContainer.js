@@ -1,9 +1,11 @@
-import './ItemListContainer.scss';
 import React, { useEffect, useState } from "react";
-import ItemList from '../ItemList/ItemList';
-import productos from '../../productos';
 import { useParams } from 'react-router-dom';
+import './ItemListContainer.scss';
+/*-------Components---------*/
+import ItemList from '../ItemList/ItemList';
 import Loader from '../../common/Loader/Loader';
+/*--------PRODUCTOS----------*/
+import productos from '../../productos';
 
 
 const ItemListContainer = () => {

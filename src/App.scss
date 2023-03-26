@@ -26,6 +26,13 @@ $color-bLanco :#F8FCFF;
   }
 }
 .main-Cart {
+  flex-direction: column;
+  .cont-title {
+    .title {
+      font-size: 22px;
+      margin: 1.5rem;
+    }
+  }
   .cont-cart {
     width: 100%;
     display: flex;
@@ -51,10 +58,21 @@ $color-bLanco :#F8FCFF;
         }
       }
     }
+    .cont-resumen {
+      width: 90%;
+      margin: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .p-resumen-carrito {
+        font-size: 18px;
+      }
+    }
   }
 }
 main {
   margin: 3rem 9rem;
+  padding: 2rem 0;
   background-color: $color-bLanco;
   border: 1px black dashed;
   display: flex;

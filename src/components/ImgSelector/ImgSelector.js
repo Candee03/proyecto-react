@@ -12,11 +12,11 @@ const ImgSelector = ({imagenes}) => {
     return (
         <div className='container'>
             <div className='container-img'>
-                <img className='main-img' src={imgActive}></img>
+                <img alt='' className='main-img' src={imgActive}></img>
             </div>
 
             <div className='selector-container'>
-                {imagenes.map((imagen, id) => <button key={id} onClick={()=>changeImg(imagen)}><img className={imgActive===imagen?'active':'inactive'} src={imagen}></img></button>)}
+                {imagenes.map((imagen, id) => <button key={id} onClick={()=>changeImg(imagen)}><img alt='' className={imgActive===imagen?'active':'inactive'} src={imagen}></img></button>)}
             </div>
         </div>  
     )

@@ -56,7 +56,7 @@ const productosData = [
     {
     id:7,
     nombre: 'Conjunto Niño', 
-    precio:16500,
+    precio:13500,
     img: ['https://firebasestorage.googleapis.com/v0/b/dollytienda-b36ab.appspot.com/o/Group%202.png?alt=media&token=8dc78f23-261e-4cf8-b1e8-edaa4dc23157'],
     categoria:3,
     description: 'tejido a mano con lana de excelente calidad',
