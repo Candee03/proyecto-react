@@ -8,9 +8,9 @@ import NavBar from './common/NavBar/NavBar';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 import SobreNosotros from './pages/SobreNosotros';
 import Error from './pages/Error';
-
 
 
 const App = () => {
@@ -25,8 +25,9 @@ const App = () => {
           <Route path='/' element={<Home/>} />
           <Route path='/category/:idCategory' element={<Home/>} />
           <Route path='/detail/:idProduct' element={<Details/>} />
-          <Route path='/cart' element={<Cart/>} />
           <Route path='/sobre-nosotros' element={<SobreNosotros/>} />
+          <Route path='/cart' element={<Cart/>} />
+          <Route path='/checkout' element={<Checkout/>} />
           <Route path='*' element={<Error/>} />
         </Routes>
       </BrowserRouter>

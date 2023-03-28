@@ -12,9 +12,9 @@ const NavBar = () => {
             <div>
                 <ul className='ul-links'>
                     <li className="li-navbar"><Link className="link-navbar" to={'/'}>Home</Link></li>
-                    <li className="li-navbar"><Link className="link-navbar" to={'/category/1'}>Accesorios</Link></li>
-                    <li className="li-navbar"><Link className="link-navbar" to={'/category/2'}>Ropa</Link></li>
-                    <li className="li-navbar"><Link className="link-navbar" to={'/category/3'}>Infantil</Link></li>
+                    <li className="li-navbar"><Link className="link-navbar" to={'/category/accesorios'}>Accesorios</Link></li>
+                    <li className="li-navbar"><Link className="link-navbar" to={'/category/ropa'}>Ropa</Link></li>
+                    <li className="li-navbar"><Link className="link-navbar" to={'/category/infantil'}>Infantil</Link></li>
                     <li className="li-navbar"><Link className="link-navbar" to={'/sobre-nosotros'}>Sobre Nosotros</Link></li>
                 </ul>
             </div>

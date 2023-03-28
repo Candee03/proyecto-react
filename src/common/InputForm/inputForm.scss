@@ -1,0 +1,18 @@
+.cont-inputForm {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .label {
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 0.5rem;
+    }
+    .input {
+        font-size: 18px;
+        height: 2rem;
+        width: 30rem;
+        border: 1px dashed black;
+        padding-left: 0.5rem;
+    }
+}

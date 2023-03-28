@@ -1,5 +1,9 @@
 :disabled {
     opacity: 50% !important;
 }
+.btn:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
 
 

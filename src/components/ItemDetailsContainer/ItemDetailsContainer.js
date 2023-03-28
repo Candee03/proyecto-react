@@ -3,26 +3,28 @@ import { useParams } from "react-router-dom";
 /*-------Components---------*/
 import Loader from "../../common/Loader/Loader";
 import ItemDetail from "../ItemDetail/ItemDetail";
-/*--------PRODUCTOS----------*/
-import productos from "../../productos";
+/*-------------FIREBASE-------------*/
+import { getSingleProductsFromDataBase } from '../../services/firebase';
+
 
 
 const ItemDetailsContainer = () => {
-    const {idProduct} = useParams()
     const [listProduct, setListProduct] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const {idProduct} = useParams()
     
-    /*-------------FIREBASE-------------*/
+    const traerDatos = async () => {
+        let product =  await getSingleProductsFromDataBase(idProduct);
+        setListProduct(product)
+        setIsLoading(false)
+    }
     useEffect (() => {
-        setTimeout(() => {
-            productos().then((data) => {
-                setListProduct(data.find((producto)=> producto.id === Number(idProduct)));
-            })
-        }, 2000)
+        traerDatos()
     }, [])
 
     return (
         <div className='cont-items'>
-            {listProduct.length===0? <Loader/>:<ItemDetail producto={listProduct}/>}
+            {isLoading? <Loader/>:<ItemDetail producto={listProduct}/>}
         </div>
     );
 };

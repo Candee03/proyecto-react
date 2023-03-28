@@ -4,22 +4,19 @@ import { BtnConFuncion, BtnLinkeadoAzul, BtnLinkeadoBlanco } from '../common/But
 
 const Cart = () => {
     const { cart, countTotalItems, removeItem, clear, countPrecioTotal } = useContext(cartContext)
-    if(cart.length === 0) {
-        return (
-            <main className='main-Cart'>
-                <div className='cont-cart'>
-                    <span>Tu carrito está vacio</span>
-                    <BtnLinkeadoAzul margin ={'1rem'} link={'/'} children={'Volver al menú'}/>
-                </div>
-            </main>
-        )}
+
     return (
         <>
             <BtnLinkeadoBlanco link={'/'} children={'Volver'} position={'absolute'}/>
             <main className='main-Cart'>
                 <div className='cont-title'>
-                    <h1 className='title'>Mi Carrito</h1>
+                    <h1 className='title'>Mi Carrito:</h1>
                 </div>
+                {cart.length === 0?
+                <div className='cont-cart'>
+                    <h2>Tu carrito está vacio</h2>
+                    <BtnLinkeadoAzul margin ={'1rem'} link={'/'} children={'Volver al menú'}/>
+                </div>:
                 <div className='cont-cart'>
                     <table className='table'>
                         <tbody>
@@ -32,11 +29,11 @@ const Cart = () => {
                                 <th>Remover</th>
                                 <th>Total</th>
                             </tr>
-                            {cart.map((producto)=>{
+                            {cart.map((producto, id)=>{
                                 return(
-                                    <tr>
-                                        <td>#{producto.id}</td>
-                                        <td><img alt='' style={{width:'5rem'}} src={producto.img[0]}></img></td>
+                                    <tr key={id}>
+                                        <td style={{width:'0.5rem'}}>#{producto.id}</td>
+                                        <td><img alt='' style={{width:'6rem'}} src={producto.img[0]}></img></td>
                                         <td>{producto.nombre}</td>
                                         <td>${producto.precio}</td>
                                         <td>{producto.count}</td>
@@ -51,7 +48,11 @@ const Cart = () => {
                         <p className='p-resumen-carrito'>Precio Total: ${countPrecioTotal()}</p>
                         <BtnConFuncion funcion={clear} children={'Vaciar todo el carrito'} size={'16px'} padding={'0.2rem 0.5rem'} margin ={'1rem 0'}/>
                     </div>
+                    <div className='cont-btn-comprar'>
+                        <BtnLinkeadoAzul size={'20px'} children={'Comprar'} link={'/checkout'} margin={'1rem'}/>
+                    </div>
                 </div>
+                }
             </main>
         </>
     )

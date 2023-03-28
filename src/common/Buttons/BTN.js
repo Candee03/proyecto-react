@@ -2,49 +2,52 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './btn.scss'
 
-const BtnLinkeadoBlanco = (props) => {
+const BtnLinkeadoBlanco = ({margin, position, link, children, size}) => {
   const styleBtn = {
     backgroundColor:'#F8FCFF',
     color:'black',
+    fontSize: size || '16px',
     padding: '0.5rem',
     borderRadius: '10px',
     border: '1px black dashed',
-    margin: props.margin || '3rem 0 0 3rem',
-    position: props.position || 'inline-block',
+    margin: margin || '3rem 0 0 3rem',
+    position: position || 'inline-block',
   }
   return (
-    <Link style={styleBtn} to={props.link}>{props.children}</Link>
+    <Link style={styleBtn} to={link}>{children}</Link>
   )
 }
 
-const BtnLinkeadoAzul = (props) => {
+const BtnLinkeadoAzul = ({margin, position, link, children, size}) => {
   const styleBtn = {
     backgroundColor:'rgb(156, 231, 248)',
     color:'black',
+    fontSize: size || '16px',
     padding: '0.5rem',
     borderRadius: '10px',
     border: '1px black dashed',
-    margin: props.margin || '3rem 0 0 3rem',
-    position: props.position || 'inline-block',
+    margin: margin || '3rem 0 0 3rem',
+    position: position || 'inline-block',
   }
   return (
-    <Link style={styleBtn} to={props.link}>{props.children}</Link>
+    <Link style={styleBtn} to={link}>{children}</Link>
   )
 }
 
-const BtnConFuncion = (props) => {
+const BtnConFuncion = ({padding, margin, size, deshabilitado, funcion, children, weight}) => {
   const styleBtn = {
+    textTransform: 'capitalize',
     backgroundColor:'rgb(156, 231, 248)',
     color:'black',
-    padding: props.padding || '0.3rem 1rem',
+    padding: padding || '0.3rem 1rem',
     borderRadius: '10px',
     border: '1px black dashed',
-    margin: props.margin || '1rem',
-    fontSize: props.size || '20px',
-    fontWeight: 'bold'
+    margin: margin || '1rem',
+    fontSize: size || '20px',
+    fontWeight: weight||'bold'
   }
   return (
-    <button className='btn' disabled={props.deshabilitado || false} onClick={props.funcion} style={styleBtn}>{props.children}</button>
+    <button className='btn' disabled={deshabilitado || false} onClick={funcion} style={styleBtn}>{children}</button>
   )
 }
 

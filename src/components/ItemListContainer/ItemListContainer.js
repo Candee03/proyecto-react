@@ -4,26 +4,36 @@ import './ItemListContainer.scss';
 /*-------Components---------*/
 import ItemList from '../ItemList/ItemList';
 import Loader from '../../common/Loader/Loader';
-/*--------PRODUCTOS----------*/
-import productos from '../../productos';
+/*--------FIREBASE----------*/
+import { getProductsByCategoryFromDataBase, getProductsToDataBase } from "../../services/firebase";
 
 
 const ItemListContainer = () => {
     const [listProducts, setListProducts] = useState([])
-    const {idCategory}  = useParams()
+    const [isLoading, setIsLoading] = useState(true)
+    const {idCategory} = useParams();
 
+
+    const traerDatos = async () => {
+        setIsLoading(true)
+        if(idCategory === undefined) {
+            let products =  await getProductsToDataBase();
+            setListProducts(products)
+            setIsLoading(false)
+        } else {
+            let products =  await getProductsByCategoryFromDataBase(idCategory);
+            setListProducts(products)
+            setIsLoading(false)
+        }
+    }
+    
     useEffect (() => {
-        setListProducts([])
-        setTimeout (()=>{
-            productos().then((data) => {
-                idCategory? setListProducts(data.filter((productos)=> productos.categoria === Number(idCategory))): setListProducts(data)
-            })
-        },2000)
+        traerDatos()
     },[idCategory])
 
     return (
         <div className='cont-items'>
-            {listProducts.length===0?<Loader/>:<ItemList Items={listProducts}/>}
+            {isLoading?<Loader/>:<ItemList Items={listProducts}/>}
         </div>
     );
 };
