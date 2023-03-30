@@ -12,7 +12,7 @@ Decidí basar mi proyecto en un emprendimiento de tejidos. Pero tambien con la i
   </a>
 </div>
 
-*imagenes de cómo se ve el proyecto mientras se navega.*
+*imagen de cómo se ve el proyecto mientras se navega.*
 
 <br>
 
