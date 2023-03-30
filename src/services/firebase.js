@@ -43,7 +43,6 @@ export const getSingleProductsFromDataBase = async(id) => {
     const collectionRef = collection(db, 'productos')
     const docRef = doc(collectionRef, id)
     let docSnapshot = await getDoc(docRef)
-
     return {...docSnapshot.data(), id: docSnapshot.id}
 }
 

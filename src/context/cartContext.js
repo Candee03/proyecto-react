@@ -6,18 +6,24 @@ import Swal from 'sweetalert2'
 const cartContext = createContext({
     cart:[]
 })
+
 /*-----------Provider del carrito------------- */
 const CartContextProvider= (props) => {
-    const [cart, setCart] = useState([])
+    const cartStorage = JSON.parse(localStorage.getItem('carrito'));
+    const [cart, setCart] = useState(cartStorage? cartStorage:[])
 
-    /*-----------Funciones del carrito------------- */
+
     const addItem = (producto, count) => {
         const newCart ={...producto, count}
         setCart([...cart, newCart])
+        /*----add to storage---*/
+        const cartStorage = [...cart, newCart]
+        localStorage.setItem('carrito', JSON.stringify(cartStorage));
     }
     const removeItem = (id) => {
         const productosFiltrados = cart.filter((items)=> items.id !== id)
         setCart(productosFiltrados)
+        localStorage.setItem('carrito', JSON.stringify(productosFiltrados));
     }
     const clear = () => {
         Swal.fire({
@@ -25,12 +31,14 @@ const CartContextProvider= (props) => {
             text:'Se borrarán los productos que guardaste',
             icon: 'question',
             showCancelButton: true,
+            cancelButtonText:'cancelar',
+            cancelButtonColor:'red',
             confirmButtonColor: '#3085d6',
-            cancelButtonColor: 'red',
             confirmButtonText: 'Si, estoy seguro'
         }).then((result) => {
             if (result.isConfirmed) {
             setCart([])
+            localStorage.setItem('carrito', JSON.stringify([]));
             }
         })
     }

@@ -4,7 +4,6 @@ import { BtnConFuncion, BtnLinkeadoAzul, BtnLinkeadoBlanco } from '../common/But
 
 const Cart = () => {
     const { cart, countTotalItems, removeItem, clear, countPrecioTotal } = useContext(cartContext)
-
     return (
         <>
             <BtnLinkeadoBlanco link={'/'} children={'Volver'} position={'absolute'}/>
@@ -32,9 +31,9 @@ const Cart = () => {
                             {cart.map((producto, id)=>{
                                 return(
                                     <tr key={id}>
-                                        <td style={{width:'0.5rem'}}>#{producto.id}</td>
+                                        <td style={{width:'0.5rem'}}>#{producto.numero}</td>
                                         <td><img alt='' style={{width:'6rem'}} src={producto.img[0]}></img></td>
-                                        <td>{producto.nombre}</td>
+                                        <td style={{textTransform:'capitalize'}}>{producto.nombre}</td>
                                         <td>${producto.precio}</td>
                                         <td>{producto.count}</td>
                                         <td><BtnConFuncion funcion={()=>removeItem(producto.id)} children={'X'} size={'16px'} padding={'0.2rem 0.5rem'} margin={'0'}/></td>

@@ -5,10 +5,9 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 const Home = () => {
     return (
       <main>
-        {/*
-        ----boton de exportar data----
-        <button onClick={exportData}>exportar</button> 
-        */}
+        
+        {/* ----boton de exportar data---- */}
+        {/* <button onClick={exportData}>exportar</button> */}
         <ItemListContainer />
       </main>
     )

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import Swal from 'sweetalert2'
 import { BtnConFuncion, BtnLinkeadoAzul } from '../common/Buttons/BTN'
 import InputForm from '../common/InputForm/InputForm'
 import cartContext from '../context/cartContext'
@@ -41,15 +42,42 @@ const Checkout = () => {
             timeStamp: new Date()
         }
         createOrder(orderData)
+        Swal.fire({
+            iconHtml:'😄',
+            title: '¡Felicitaciones, tu compra se efectuó con éxito!',
+            text:'Te contáctaremos para acordar el envío',
+            timer:4000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            allowOutsideClick:false,
+            backdrop:'rgba(221, 255, 182, 0.582) url(https://usagif.com/wp-content/uploads/gif/confetti-25.gif)'
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                localStorage.removeItem('carrito')
+                window.location.replace('/')
+            }
+        })
     }
 
     const clearForm = () => {
-        setUserData({
-            fullName:'',
-            numCard:'',
-            email:'',
-            phone:'',
-            adress:''
+        Swal.fire({
+            title: '¿Seguro que quieres borrar todo el formulario?',
+            icon: 'question',
+            showCancelButton: true,
+            cancelButtonText:'cancelar',
+            cancelButtonColor:'red',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Si'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setUserData({
+                    fullName:'',
+                    numCard:'',
+                    email:'',
+                    phone:'',
+                    adress:''
+                })
+            }
         })
     }
 
@@ -62,7 +90,7 @@ const Checkout = () => {
                 <form>
                     <InputForm 
                     value={userData.fullName}
-                    placeholderInput={'Juan perez'} 
+                    placeholderInput={'Nombre Apellido'} 
                     childrenLabel={'Nombre completo'} 
                     nameInput={'fullName'} 
                     onChange={handleInput}/>
