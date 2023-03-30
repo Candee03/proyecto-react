@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import cartContext from '../context/cartContext'
-import { BtnConFuncion, BtnLinkeadoAzul, BtnLinkeadoBlanco } from '../common/Buttons/BTN'
+import { BtnConFuncion, BtnLinkeadoAzul } from '../common/Buttons/BTN'
 
 const Cart = () => {
     const { cart, countTotalItems, removeItem, clear, countPrecioTotal } = useContext(cartContext)
     return (
         <>
-            <BtnLinkeadoBlanco link={'/'} children={'Volver'} position={'absolute'}/>
+            {cart.length !== 0 && <BtnLinkeadoAzul link={'/'} children={'Ir al menú'} position={'absolute'}/>}
             <main className='main-Cart'>
                 <div className='cont-title'>
                     <h1 className='title'>Mi Carrito:</h1>

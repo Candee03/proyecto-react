@@ -1,11 +1,11 @@
 import React from 'react'
-import { BtnLinkeadoBlanco } from "../common/Buttons/BTN";
+import { BtnLinkeadoAzul } from "../common/Buttons/BTN";
 import ItemDetailsContainer from '../components/ItemDetailsContainer/ItemDetailsContainer'
 
 const Details = () => {
     return (
         <>
-        <BtnLinkeadoBlanco link={'/'} children={'Volver'} position={'absolute'}/>
+        <BtnLinkeadoAzul link={`/`} children={'Ir al menú'} position={'absolute'}/>
         <main>
             <ItemDetailsContainer />
         </main>

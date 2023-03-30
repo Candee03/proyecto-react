@@ -10,7 +10,7 @@ const BtnLinkeadoBlanco = ({margin, position, link, children, size}) => {
     padding: '0.5rem',
     borderRadius: '10px',
     border: '1px black dashed',
-    margin: margin || '3rem 0 0 3rem',
+    margin: margin || '4rem 0 0 10rem',
     position: position || 'inline-block',
   }
   return (
@@ -26,7 +26,7 @@ const BtnLinkeadoAzul = ({margin, position, link, children, size}) => {
     padding: '0.5rem',
     borderRadius: '10px',
     border: '1px black dashed',
-    margin: margin || '3rem 0 0 3rem',
+    margin: margin || '4rem 0 0 10rem',
     position: position || 'inline-block',
   }
   return (

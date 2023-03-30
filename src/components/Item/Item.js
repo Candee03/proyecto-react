@@ -11,7 +11,7 @@ const Item = ({producto}) =>{
             <p className="nombre-description-card">{producto.nombre}</p>
             <p className="description-card">{producto.description}</p>
         </div>
-        <BtnLinkeadoBlanco link={`/detail/${producto.id}`} children={'Ver Detalle'} margin={'0 0.5rem 0.5rem 0.5rem'}/>
+        <BtnLinkeadoBlanco link={`/detail/${producto.id}`} children={'Ver Detalle'} margin={'0 0.5rem 0.5rem'}/>
     </li>
     )
 }

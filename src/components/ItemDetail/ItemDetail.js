@@ -11,7 +11,6 @@ import Swal from 'sweetalert2'
 
 const ItemDetail = ({producto}) =>{
     const { addItem, isInCart } = useContext(cartContext)
-    
     const addToCart = (count) => {
         Swal.fire({
             title:'¡Se agregó el producto al carrito!',
