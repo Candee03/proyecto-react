@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# **E-Commerce Dolly Tejidos**
+Este es un proyecto individual realizado para el curso de React-js de Coderhouse, en donde, para su desarrollo fueron implementadas distintas herramientas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+<div>
+  <a href="https://codesandbox.io">
+    <img src="https://codesandbox.io/static/img/banner.png?v=2" width="500px">
+  </a>
+</div>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## **Cómo iniciar el proyecto:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A continuación te dejo un paso a paso de cómo iniciar el proyecto de forma local para poder acceder al código.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+### **1 Descargarlo**
+Dirígete a la consola Git bash y copia el siguiente comando. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    git clone https://github.com/Candee03/proyecto-react.git
 
-### `npm run build`
+Luego presiona 'ENTER'.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Se descagará el último commit del proyecto de la rama Master.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **2 Iniciar el proyecto**
 
-### `npm run eject`
+- Para abrir el repositorio en Visual Studio ejecute el comando
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        code .
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Para iniciar el proyecto en el navegador ejecute el comando
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### *nota: Asegurate de ejecutar estos comandos dentro de la carpeta del repositorio*
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Herramientas utilizadas:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - [SweetAlert2](https://sweetalert2.github.io/) - usado para generar las alertas
+  - [React Spinners](https://mhnpd.github.io/react-loader-spinner/) - para los loaders
+  - [React Router Dom](https://reactrouter.com/en/main) - para la navegacion del sitio
