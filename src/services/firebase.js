@@ -7,10 +7,10 @@ import productos from "../productos";
 //FIREBASE CONFIG--------------------------------
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDzdgzNBDZuAYF_efJB5MW_L9pEHRKWrJs",
-    authDomain: "dolly-e-commerce.firebaseapp.com",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
     projectId: "dolly-e-commerce",
-    storageBucket: "dolly-e-commerce.appspot.com",
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: "495437987482",
     appId: "1:495437987482:web:76614807991b02fc42e923"
 };
