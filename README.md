@@ -8,7 +8,7 @@ Decidí basar mi proyecto en un emprendimiento de tejidos. Pero tambien con la i
 
 <div>
   <a href="https://codesandbox.io">
-    <img src="https://firebasestorage.googleapis.com/v0/b/dollytienda-b36ab.appspot.com/o/Dolly-Tejidos-Google-Chrome-2023-03-30-16-25-04.gif?alt=media&token=e106251e-d4c0-4495-be14-46cc866adb11" width="600px">
+    <img src="https://firebasestorage.googleapis.com/v0/b/dollytienda-b36ab.appspot.com/o/Sin%20t%C3%ADtulo%20-%20Google%20Chrome%2030_3_2023%2017_13_12.png?alt=media&token=a7047d29-f3ed-4cc5-af23-bd42ad57ae1c" width="600px">
   </a>
 </div>
 
